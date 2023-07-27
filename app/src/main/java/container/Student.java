@@ -10,7 +10,7 @@ public class Student implements Serializable{
 
     // make all the attribute public as we are storing it in a private database
     public String name;
-    public int roll;
+    public long roll;
     public String section;
     public String branch;
     public long phoneNumber;
@@ -20,7 +20,7 @@ public class Student implements Serializable{
 
 
     public Student(String name,
-            int roll,
+            long roll,
             String section,
             String branch,
             long phoneNumber,
