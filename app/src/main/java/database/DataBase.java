@@ -23,15 +23,25 @@ import container.Student;
 public class DataBase {
     private ArrayList<Student> studentDatatbase = new ArrayList<Student>();
 
+    // if used local/University roll number, University roll number is unique for every students
     public void removeStudent(long roll, String section, String branch) {
         for (Student s : studentDatatbase) {
-            if (s.roll == roll && s.branch.equals(branch) && s.section.equals(section)) {
+            if (s.getRoll() == roll && s.getBranch().equals(branch) && s.getSection().equals(section)) {
                 studentDatatbase.remove(s);
                 break;
             }
         }
     }
-
+    public void removeStudent(long roll)
+    {
+        int count = 0;
+        for(Student s : studentDatatbase)
+        {
+            if(s.getRoll() == roll) {
+                count++;
+            }
+        }
+    }
     public void addStudent(
             String name,
             long roll,
@@ -49,7 +59,6 @@ public class DataBase {
                 address,
                 registrationNumber);
         o.dateOfAdmission = LocalDate.now().toString();
-
         studentDatatbase.add(o);
     }
 
