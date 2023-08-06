@@ -42,25 +42,25 @@ public class DataBase {
             }
         }
     }
-    public void addStudent(
-            String name,
-            long roll,
-            String section,
-            String branch,
-            long phoneNumber,
-            String address,
-            long registrationNumber) {
+    // public void addStudent(
+    //         String name,
+    //         long roll,
+    //         String section,
+    //         String branch,
+    //         long phoneNumber,
+    //         String address,
+    //         long registrationNumber) {
 
-        Student o = new Student(name,
-                roll,
-                section,
-                branch,
-                phoneNumber,
-                address,
-                registrationNumber);
-        o.dateOfAdmission = LocalDate.now().toString();
-        studentDatatbase.add(o);
-    }
+    //     Student o = new Student(name,
+    //             roll,
+    //             section,
+    //             branch,
+    //             phoneNumber,
+    //             address,
+    //             registrationNumber);
+    //     o.dateOfAdmission = LocalDate.now().toString();
+    //     studentDatatbase.add(o);
+    // }
 
     public void display() {
         // to be implement by other Enginneer
